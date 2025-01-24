@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar{
+    height: 50px;
+    width: 100%;
+    background-color: black;
+}
+
+.nav-container{
+    display: flex;
+    color: white;
+    height: 100%;
+    padding: 0 50px;
+    align-items: center;
+    font-family: 'Sen', sans-serif;
+}
+
+.nav-logo{
+   
+    flex: 1;
+}
+.smile{
+    display: inline;
+    transition: all 1s ease;
+}
+
+.smile:hover{
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.logo{
+    font-size: 30px;
+}
+
+.nav-menu{
+    flex: 6;
+    
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+.menu-list-item{
+    margin: 10px;
+    font-size: 25px;
+}  
+
+.border{
+    border-bottom: 2px solid transparent;
+    transition: 1s all linear;
+}
+
+.menu-list-item.border:hover{
+    border-bottom: 2px solid rgb(136, 250, 248);
+    transform: scale(1.1); 
+    cursor: pointer;
+}
+
+
+
+.menu-list-item.active{
+    font-weight: bold;
+    border-bottom: 2px solid rgb(136, 250, 248);
+}
+
+.nav-profile{
+    flex: 1; 
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+   
+}
+
+
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    transition: all 1s ease;
+}
+
+.toggle:hover{
+    transform: scale(1.1px);
+    box-shadow: 5px 5px 12px rgb(136, 250, 248);
+}
+
+.toggle-icon{
+    color: gold;
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    right: 1px;
+    cursor: pointer;
+    transition: 1s all ease;
+}
+
+.profile-text-container{
+    margin: 0 25px;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: all 1s linear;
+}
+
+.textofprofile{
+    margin-right: 5px;
+   
+}
+
+.profile-text-container:hover{
+    border-bottom: 2px solid rgb(136, 250, 248);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.profile-img{
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid transparent;
+    transition: all 1s ease-in-out;
+}
+
+.profile-img:hover{
+    border: 1px solid rgb(210, 236, 253);
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 1px 1px 12px rgb(136, 250, 248);
+}
+
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color:black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    
+    
+}
+
+.sidebar-icons{
+    font-size: 20px;
+    color: white;
+    margin-bottom: 45px;
+    transition: 1s all ease-in-out;
+}
+
+.sidebar-icons:hover{
+    transform: scale(2.2);
+    cursor: pointer;
+}
+
+/**********/
+.container{
+    background-color: #151515;
+    min-height: calc(100vh-50px);
+    color: white;
+    
+}
+
+.container-2{
+    padding-top: 25px;
+}
+
+
+.content-container{
+    margin-left: 50px;
+}
+
+.featured-content{
+    height: 50vh;
+    padding: 50px;
+}
+
+.featured-img{
+    width: 300px;
+}
+
+
+.featured-des{
+    width: 500px;
+}
+
+.featured-btn{
+    border: 0;
+    border-radius: 20px ;
+    background-color:green;
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 20px;
+    color: white;
+    margin-top: 20px;
+    outline: none;
+    transition: all 1s ease;
+   
+
+}
+
+.featured-btn:hover{
+    box-shadow: 2px 2px 10px rgb(179, 233, 255);
+    transform: scale(1.1px);
+}
+
+/****/
+.movie-list-container{
+    padding-left: 50px;
+    margin-left: 20px;
+
+}
+
+.movie-list-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.movie-List{
+    display: flex;
+    flex: wrap;
+    margin-top: 20px;
+    align-items: center;
+    transform: translateX(0);
+    
+}
+
+.movie-list-item{
+    position: relative;
+    margin-right: 20px;
+    
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.5);
+    margin: 0 30px;
+    opacity: 0.45;
+    
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-des,
+.movie-list-item:hover .movie-btn{
+    opacity: 1;
+}
+
+.movie-list-item-img{
+    height: 270px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: all 1s ease-in-out;
+
+}
+
+.movie-list-item-title{
+    background-color:rgba(51,51,51,0.3);
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 30px;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+     opacity: 0;
+     transition: 1s all ease-in-out;
+
+}
+
+.movie-list-item-des{
+    background-color: rgba(51,51,51,0.3);
+    padding: 0 10px;
+    font-size: 15px;
+    position: absolute;
+    width: 200px;
+    top: 30%;
+    left: 50px;
+     opacity: 0; 
+    transition: 1s all ease-in-out;
+}
+
+.movie-btn{
+    background-color: green;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    z-index: 1;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+
+}
+
+.movie-btn:hover{
+    box-shadow: 2px 2px 10px rgb(179, 233, 255);
+    transform: scale(1.1px);
+}
+
+.arrow-cont{
+    position: absolute;
+    top: 90px;
+    right: 5px;
+}
+.arrow-icon{
+    font-size: 120px;
+     color: lightgray;
+    opacity: 0.5;
+    cursor: pointer; 
+}
+
+/***theme****/
+
+.container.active{
+    background-color: white;
+    color: black;
+    min-height: calc(100vh-50px);
+}
+
+.sidebar.active{
+    background-color: white;
+      
+}
+
+.sidebar-icons.active{
+    color: black; 
+}
+
+.nav-bar.active{
+    background-color: white;
+    color: black;
+}
+
+.nav-container.active{
+    background-color: white;
+    color: black;
+}
+
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+@media only screen and (max-width: 940px){
+    .nav-menu{
+        display: none;
+    }
+}
